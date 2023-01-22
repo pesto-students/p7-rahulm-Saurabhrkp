@@ -1,5 +1,5 @@
 //Given reducer method:
-const add = (a, b = 0) => a + b;
+const add = (...args) => args.reduce((acc, val) => acc + val, 0);
 
 const memoize = (func) => {
   // a cache of results
