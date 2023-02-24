@@ -1,0 +1,58 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.container {
+  display: inline-flex;
+  height: 90%;
+
+}
+
+:root {
+  --bg-color: #d8d7d7;
+}
+
+nav {
+  background-color: var(--bg-color);
+  width: 10%;
+  height: 100%;
+}
+
+nav ul li {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+nav ul li i {
+  margin: 20px;
+}
+
+.banner-container {
+  display: flex;
+  height: 20%;
+  background-color: #2e2c2c;
+  color: #ffffff;
+}
+
+.banner {
+  display: flex;
+  margin: 30px;
+}
+
+banner i {
+  display: flex;
+}
+
+.thumbnail {
+  margin-right: 50px;
+}
+
+.thumbnail-container {
+  height: 50%;
+  display: flex;
+  justify-content: stretch;
+}
+
+.options {}
