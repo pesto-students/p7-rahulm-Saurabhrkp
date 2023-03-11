@@ -1,45 +1,45 @@
-const mathOperations = require('../mathOperations');
+const mathOperations = require('./mathOperations');
 
-describe('Math operations', () => {
-  describe('Sum function', () => {
-    test('adds two positive integers', () => {
-      expect(mathOperations.sum(2, 3)).toEqual(5);
+describe('mathOperations', () => {
+  describe('sum', () => {
+    it('should add two positive numbers correctly', () => {
+      expect(mathOperations.sum(1, 2)).toBe(3);
     });
 
-    test('adds a positive and a negative integer', () => {
-      expect(mathOperations.sum(2, -3)).toEqual(-1);
+    it('should add a positive and a negative number correctly', () => {
+      expect(mathOperations.sum(1, -2)).toBe(-1);
     });
 
-    test('adds two negative integers', () => {
-      expect(mathOperations.sum(-2, -3)).toEqual(-5);
-    });
-  });
-
-  describe('Diff function', () => {
-    test('subtracts two positive integers', () => {
-      expect(mathOperations.diff(5, 2)).toEqual(3);
-    });
-
-    test('subtracts a positive and a negative integer', () => {
-      expect(mathOperations.diff(2, -3)).toEqual(5);
-    });
-
-    test('subtracts two negative integers', () => {
-      expect(mathOperations.diff(-2, -3)).toEqual(1);
+    it('should add two negative numbers correctly', () => {
+      expect(mathOperations.sum(-1, -2)).toBe(-3);
     });
   });
 
-  describe('Product function', () => {
-    test('multiplies two positive integers', () => {
-      expect(mathOperations.product(2, 3)).toEqual(6);
+  describe('diff', () => {
+    it('should subtract two positive numbers correctly', () => {
+      expect(mathOperations.diff(2, 1)).toBe(1);
     });
 
-    test('multiplies a positive and a negative integer', () => {
-      expect(mathOperations.product(2, -3)).toEqual(-6);
+    it('should subtract a positive and a negative number correctly', () => {
+      expect(mathOperations.diff(2, -1)).toBe(3);
     });
 
-    test('multiplies two negative integers', () => {
-      expect(mathOperations.product(-2, -3)).toEqual(6);
+    it('should subtract two negative numbers correctly', () => {
+      expect(mathOperations.diff(-2, -1)).toBe(-1);
+    });
+  });
+
+  describe('product', () => {
+    it('should multiply two positive numbers correctly', () => {
+      expect(mathOperations.product(2, 3)).toBe(6);
+    });
+
+    it('should multiply a positive and a negative number correctly', () => {
+      expect(mathOperations.product(2, -3)).toBe(-6);
+    });
+
+    it('should multiply two negative numbers correctly', () => {
+      expect(mathOperations.product(-2, -3)).toBe(6);
     });
   });
 });
